@@ -22,6 +22,8 @@ const reasons = [
 function Reasons() {
     const [showAll, setShowAll] = useState(false);
     const visibleCount = showAll ? reasons.length : 4;
+    const visibleReasons = reasons.slice(0, visibleCount);
+    const isOdd = visibleReasons.length % 2 !== 0;
 
     return (
         <section className={styles.container}>
@@ -30,7 +32,7 @@ function Reasons() {
             {/* Desktop grid */}
             <div className={styles.gridWrapper}>
                 <div className={styles.grid}>
-                    {reasons.slice(0, visibleCount).map((reason, index) => {
+                    {visibleReasons.map((reason, index) => {
                         const shouldAnimate = showAll && index >= 4;
                         return (
                             <div
@@ -42,6 +44,9 @@ function Reasons() {
                             </div>
                         );
                     })}
+
+                    {/* пустая заглушка для чёткой сетки */}
+                    {isOdd && <div className={styles.card} style={{ visibility: "hidden" }} />}
                 </div>
 
                 {reasons.length > 4 && (
@@ -54,13 +59,13 @@ function Reasons() {
                 )}
             </div>
 
-            <div className="mobileOnly">
-                <CardSlider/>
+            {/* Мобильный слайдер */}
+            <div className={styles.mobileOnly}>
+                <CardSlider />
             </div>
-
-
         </section>
     );
 }
+
 
 export default Reasons;
