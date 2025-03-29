@@ -1,0 +1,122 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gridWrapper {
+    display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon {
+    color: #e85252;
+    flex-shrink: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/*.pageDot {*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*    border-radius: 50%;*/
+/*    background-color: #ccc;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s;*/
+/*}*/
+
+/*.pageDot:hover {*/
+/*    background-color: #999;*/
+/*}*/
+
+/*.activeDot {*/
+/*    background-color: #28a745;*/
+/*}*/
+
+.slider {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        display: none;
+    }
+
+    .slider {
+        display: block;
+    }
+
+    .cardWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%; /* Уменьшаем ширину карточек для мобильных */
+        max-width: 320px;
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .pageDot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .pageDot:hover {
+        background-color: #999;
+    }
+
+    .activeDot {
+        background-color: #e85252;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
