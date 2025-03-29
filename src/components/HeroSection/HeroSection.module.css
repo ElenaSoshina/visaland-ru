@@ -93,3 +93,40 @@
     max-width: 100%;
     height: auto;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 0;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 16px; /* Добавь это */
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%; /* 👈 Добавь это */
+        overflow-x: hidden; /* 👈 это чтобы не было скролла */
+    }
+
+    .featureItem {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        max-width: 220px;
+        width: 100%;
+        gap: 12px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}

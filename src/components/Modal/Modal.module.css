@@ -60,6 +60,20 @@ select, textarea {
     resize: none;
 }
 
+select {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg fill='gray' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 12l-6-6h12l-6 6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 1em;
+}
+
 .button {
     padding: 12px;
     background-color: #e91e63;
@@ -88,4 +102,31 @@ select, textarea {
     color: #e53935;
     font-size: 13px;
     margin-top: 4px;
+}
+
+.fieldWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .modal {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .close {
+        right: 0;
+        top: 0;
+    }
+
+    select {
+        font-size: 16px;
+    }
+
+    textarea {
+        width: 92%;
+    }
 }

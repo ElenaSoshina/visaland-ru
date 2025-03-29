@@ -75,29 +75,31 @@ export default function Modal({ isOpen, onClose }) {
                                 {errors.phone && <span className={styles.errorMsg}>{errors.phone}</span>}
                             </div>
 
-                            <select>
-                                <option value="">Выберите услугу (необязательно)</option>
-                                <optgroup label="Гражданство и проживание">
-                                    <option value="rpn">РВП</option>
-                                    <option value="vnzh">ВНЖ</option>
-                                    <option value="citizenship">Гражданство РФ</option>
-                                </optgroup>
-                                <optgroup label="Загранпаспорта">
-                                    <option value="passport-urgent-child">Загранпаспорт для детей срочно</option>
-                                    <option value="passport-no-registration">Загранпаспорт без регистрации в Москве</option>
-                                    <option value="passport-standard">Загранпаспорт стандартного образца</option>
-                                    <option value="passport-biometric">Загранпаспорт биометрического образца</option>
-                                    <option value="passport-no-military-id">Загранпаспорт без военного билета</option>
-                                    <option value="passport-fast">Содействие в ускоренном получении заграничного паспорта</option>
-                                </optgroup>
-                                <optgroup label="Справки и приглашения">
-                                    <option value="criminal-record">Справка о наличии/отсутствии судимости</option>
-                                    <option value="invitation">Приглашения иностранным гражданам в РФ</option>
-                                </optgroup>
-                                <optgroup label="Визы">
-                                    <option value="visas">Визы в различные страны для граждан России</option>
-                                </optgroup>
-                            </select>
+                            <div className={styles.fieldWrapper}>
+                                <select>
+                                    <option value="">Выберите услугу (необязательно)</option>
+                                    <optgroup label="Гражданство и проживание">
+                                        <option value="rpn">РВП</option>
+                                        <option value="vnzh">ВНЖ</option>
+                                        <option value="citizenship">Гражданство РФ</option>
+                                    </optgroup>
+                                    <optgroup label="Загранпаспорта">
+                                        <option value="passport-urgent-child">Загранпаспорт для детей срочно</option>
+                                        <option value="passport-no-registration">Загранпаспорт без регистрации в Москве</option>
+                                        <option value="passport-standard">Загранпаспорт стандартного образца</option>
+                                        <option value="passport-biometric">Загранпаспорт биометрического образца</option>
+                                        <option value="passport-no-military-id">Загранпаспорт без военного билета</option>
+                                        <option value="passport-fast">Содействие в ускоренном получении заграничного паспорта</option>
+                                    </optgroup>
+                                    <optgroup label="Справки и приглашения">
+                                        <option value="criminal-record">Справка о наличии/отсутствии судимости</option>
+                                        <option value="invitation">Приглашения иностранным гражданам в РФ</option>
+                                    </optgroup>
+                                    <optgroup label="Визы">
+                                        <option value="visas">Визы в различные страны для граждан России</option>
+                                    </optgroup>
+                                </select>
+                            </div>
 
                             <textarea placeholder="Комментарий (необязательно)" rows="3"></textarea>
 

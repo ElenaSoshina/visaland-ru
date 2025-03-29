@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import styles from "./Reasons.module.css";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { CheckCircle } from "lucide-react";
-import {Swiper, SwiperSlide} from "swiper/react";
-import 'swiper/css';
-import CardSlider from "../CardSlider/CardSlider.jsx";
-
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import styles from "./CardSlider.module.css";
 
 const reasons = [
     "Работаем по договору, поэтому вы уверены в нашей надежности и качестве услуг",
@@ -19,48 +18,26 @@ const reasons = [
     "Оформляем все документы, которые нужны для работы, жизни и путешествий, поэтому с нами очень удобно!"
 ];
 
-function Reasons() {
-    const [showAll, setShowAll] = useState(false);
-    const visibleCount = showAll ? reasons.length : 4;
-
+const CardSlider = () => {
     return (
-        <section className={styles.container}>
-            <h2 className={styles.title}>10 причин, почему Вам понравится с нами работать:</h2>
-
-            {/* Desktop grid */}
-            <div className={styles.gridWrapper}>
-                <div className={styles.grid}>
-                    {reasons.slice(0, visibleCount).map((reason, index) => {
-                        const shouldAnimate = showAll && index >= 4;
-                        return (
-                            <div
-                                key={index}
-                                className={`${styles.card} ${shouldAnimate ? styles.cardAnimated : ''}`}
-                            >
-                                <CheckCircle size={34} className={styles.icon}/>
-                                <p>{reason}</p>
-                            </div>
-                        );
-                    })}
-                </div>
-
-                {reasons.length > 4 && (
-                    <button
-                        className={styles.toggleButton}
-                        onClick={() => setShowAll((prev) => !prev)}
-                    >
-                        {showAll ? "Скрыть" : "Показать ещё"}
-                    </button>
-                )}
-            </div>
-
-            <div className="mobileOnly">
-                <CardSlider/>
-            </div>
-
-
-        </section>
+        <div className={styles.sliderWrapper}>
+            <Swiper
+                modules={[Pagination]} // ← подключаем модуль
+                spaceBetween={20}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+            >
+                {reasons.map((text, index) => (
+                    <SwiperSlide key={index}>
+                        <div className={styles.card}>
+                            <CheckCircle size={34} className={styles.icon} />
+                            <p>{text}</p>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
     );
-}
+};
 
-export default Reasons;
+export default CardSlider;
