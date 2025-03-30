@@ -8,7 +8,7 @@ export default function Header({ onOpenModal}) {
 
     return (
         <header className={styles.header}>
-            <div className={clsx(styles.container, styles.inner)}>
+            <div className={styles.inner}>
                 <div className={styles.logo}>
                     <Link to="/index.html">
                         <span className={styles.logoVisa}>VISA</span>

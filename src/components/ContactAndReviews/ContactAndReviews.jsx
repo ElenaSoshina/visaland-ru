@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ContactAndReviews.module.css';
+import '../../App.css'
 
 export default function ContactAndReviews() {
     return (
@@ -34,16 +35,18 @@ export default function ContactAndReviews() {
                     <p className={styles.description}>Наши клиенты довольны сервисом и рекомендуют нас!</p>
 
                     <div className={styles.reviewsWidget}>
-                        <iframe
-                            src="https://yandex.ru/maps-reviews-widget/1080088379?comments"
-                            style={{
-                                width: '100%',
-                                height: '520px',
-                                border: '1px solid #e6e6e6',
-                                borderRadius: '8px'
-                            }}
-                            title="Отзывы Яндекс.Карты"
-                        />
+                        {/*<iframe*/}
+                        {/*    src="https://yandex.ru/maps-reviews-widget/1080088379?comments"*/}
+                        {/*    style={{*/}
+                        {/*        width: '100%',*/}
+                        {/*        height: '520px',*/}
+                        {/*        border: '1px solid #e6e6e6',*/}
+                        {/*        borderRadius: '8px'*/}
+                        {/*    }}*/}
+                        {/*    title="Отзывы Яндекс.Карты"*/}
+                        {/*/>*/}
+                        <iframe src="https://swdgts.ru/098dc2cf63cea82f9d1a780e8a91dbd0" width="100%" height="700"
+                                frameBorder="0"></iframe>
                     </div>
                 </div>
             </div>

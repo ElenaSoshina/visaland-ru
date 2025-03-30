@@ -19,7 +19,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    /*padding: 16px 0;*/
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.logo {
+    text-align: left;
 }
 
 .logo a {
@@ -100,6 +108,11 @@
 @media (max-width: 768px) {
     .burger {
         display: flex;
+        margin-right: 0;
+    }
+
+    .logo {
+        margin-left: 10px;
     }
 
     .menu {
@@ -107,11 +120,16 @@
         top: 100%;
         left: 0;
         right: 0;
+        display: none;
         flex-direction: column;
-        background-color: white;
         gap: 16px;
         padding: 16px;
-        display: none;
+
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 👈 тень */
+        border-top: 1px solid #eaeaea;            /* 👈 отделение */
+        z-index: 999;
+        transition: all 0.3s ease-in-out;
     }
 
     .menuOpen {
@@ -122,6 +140,15 @@
         flex-direction: column;
         gap: 12px;
     }
+
+    .nav a {
+        padding: 14px 24px; /* 👈 увеличиваем высоту */
+        border-bottom: 1px solid #f0f0f0; /* 👈 разделение пунктов */
+        color: #333;
+        font-weight: 500;
+        transition: background 0.2s ease;
+    }
+
 
     .contact {
         flex-direction: column;

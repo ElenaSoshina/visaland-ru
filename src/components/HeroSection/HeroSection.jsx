@@ -3,6 +3,7 @@ import styles from './HeroSection.module.css';
 import passportImage from '../../assets/hero.webp';
 import {FaFileAlt, FaLock, FaMoneyCheckAlt} from "react-icons/fa";
 import Modal from "../Modal/Modal.jsx";
+import '../../App.css'
 
 export default function HeroSection() {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -10,7 +11,7 @@ export default function HeroSection() {
 
     return (
         <section className={styles.hero}>
-            <div className="container">
+            <div>
                 <div className={styles.content}>
                     <div className={styles.left}>
                         <h1 className={styles.title}>

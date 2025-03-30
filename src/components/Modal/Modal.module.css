@@ -76,7 +76,7 @@ select {
 
 .button {
     padding: 12px;
-    background-color: #e91e63;
+    background-color: #ed5e5e;
     color: white;
     font-weight: 600;
     border: none;
@@ -110,6 +110,19 @@ select {
     width: 100%;
 }
 
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+}
+
 
 @media (max-width: 768px) {
     .modal {
@@ -118,15 +131,16 @@ select {
     }
 
     .close {
+        padding: 5px;
         right: 0;
         top: 0;
     }
 
     select {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     textarea {
-        width: 92%;
+        font-size: 14px;
     }
 }

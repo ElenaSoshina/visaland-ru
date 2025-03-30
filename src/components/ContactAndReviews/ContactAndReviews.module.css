@@ -1,5 +1,6 @@
 .section {
     padding: 60px 0;
+    max-height: 1200px;
 }
 
 .title {
@@ -51,4 +52,11 @@
 .reviewsWidget iframe {
     width: 100%;
     max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 0;
+        max-height: 1540px;
+    }
 }

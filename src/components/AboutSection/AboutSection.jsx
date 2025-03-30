@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './AboutSection.module.css';
 import { FaBriefcase, FaUsers, FaFileAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import '../../App.css'
 
 export default function AboutSection() {
     const stats = [

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './InquiryBanner.module.css';
 import image from '../../assets/migcenter.jpg'; // изображение справа
-
+import '../../App.css'
 export default function InquiryBanner({ onOpenModal }) {
     return (
         <section className={styles.banner}>

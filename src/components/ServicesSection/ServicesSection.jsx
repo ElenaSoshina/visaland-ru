@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ServicesSection.module.css';
 import {Link} from "react-router-dom";
+import '../../App.css'
 
 export default function ServicesSection() {
     const services = [
