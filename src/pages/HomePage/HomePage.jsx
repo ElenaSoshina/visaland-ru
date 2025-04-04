@@ -7,6 +7,7 @@ import ContactAndReviews from "../../components/ContactAndReviews/ContactAndRevi
 import AboutSection from "../../components/AboutSection/AboutSection.jsx";
 import Reasons from "../../components/Reasons/Reasons.jsx";
 import ContactSection from "../../components/ContactSection/ContactSection.jsx";
+import InfoSection from '../../components/InfoSection/InfoSection.jsx';
 
 export default function HomePage() {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -19,6 +20,7 @@ export default function HomePage() {
             <AboutSection />
             <ContactAndReviews />
             <Reasons />
+            <InfoSection />
             <ContactSection />
             <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
         </div>

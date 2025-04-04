@@ -1,0 +1,162 @@
+.aboutPage {
+    padding: 60px 0;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.sectionTitle {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.sectionIcon {
+    margin-right: 10px;
+    color: #ed5e5e;
+}
+
+/* Стили для секции с командой */
+.teamSection {
+    margin-bottom: 60px;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.teamCard {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.teamCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.teamIcon {
+    width: 80px;
+    height: 80px;
+    background-color: #f9f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #ed5e5e;
+}
+
+.teamInfo {
+    width: 100%;
+}
+
+.teamName {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.teamPosition {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Стили для секции с информацией об агентстве */
+.agencySection {
+    margin-bottom: 60px;
+}
+
+.infoBlock {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.infoBlock:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.infoTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.infoText {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.benefitsList {
+    list-style: none;
+    padding: 0;
+}
+
+.benefitsList li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.benefitIcon {
+    color: #ed5e5e;
+    margin-right: 10px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .aboutPage {
+        padding: 40px 0;
+    }
+    
+    .title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .sectionTitle {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .teamGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .infoTitle {
+        font-size: 18px;
+    }
+    
+    .infoText, 
+    .benefitsList li {
+        font-size: 15px;
+    }
+}

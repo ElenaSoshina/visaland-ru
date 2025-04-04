@@ -10,14 +10,17 @@ export default function Layout() {
     const [isModalOpen, setModalOpen] = useState(false);
 
     return (
-        <div className={styles.wrapper}>
-            <Header onOpenModal={() => setModalOpen(true)} />
+        <div className={styles.layoutContainer}>
+            <div className={styles.wrapper}>
+                <Header onOpenModal={() => setModalOpen(true)} />
 
-            <main className="container">
-                <div>
-                    <Outlet/>
-                </div>
-            </main>
+                <main className="container">
+                    <div>
+                        <Outlet/>
+                    </div>
+                </main>
+            </div>
+            
             <Footer />
 
             <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />

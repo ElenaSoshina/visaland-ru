@@ -28,9 +28,8 @@ export default function Header({ onOpenModal}) {
 
                 <div className={clsx(styles.menu, menuOpen && styles.menuOpen)}>
                     <nav className={styles.nav}>
+                        <Link to="/index.html" onClick={() => setMenuOpen(false)}>Главная</Link>
                         <Link to="/service.html" onClick={() => setMenuOpen(false)}>Услуги</Link>
-                        <Link to="/baza-znaniy.html" onClick={() => setMenuOpen(false)}>База знаний</Link>
-                        <Link to="/articles.html" onClick={() => setMenuOpen(false)}>Статьи</Link>
                         <Link to="/about.html" onClick={() => setMenuOpen(false)}>О нас</Link>
                     </nav>
 

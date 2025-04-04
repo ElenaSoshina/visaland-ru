@@ -16,7 +16,7 @@ export default function HeroSection() {
                     <div className={styles.left}>
                         <h1 className={styles.title}>
                             <span className={styles.black}>Оформим </span>
-                            <span className={styles.pink}>РВП, ВНЖ, Гражданство РФ, загранпаспорт</span>
+                            <span className={styles.pink}>Загранпаспорт</span>
                             <span className={styles.black}> — без лишних очередей, переплат и бюрократии. </span>
                             <span className={styles.black}>Уже </span>
                             <span className={styles.pink}>10 лет</span>

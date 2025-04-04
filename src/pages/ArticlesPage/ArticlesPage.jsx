@@ -1,9 +1,8 @@
 import React from 'react';
+import Articles from '../Articles/Articles';
 
 function ArticlesPage() {
-    return (
-        <div>ArticlesPage</div>
-    );
+    return <Articles />;
 }
 
-export default ArticlesPage;
+export default ArticlesPage; 
