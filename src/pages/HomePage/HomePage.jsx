@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import HeroSection from '../../components/HeroSection/HeroSection';
 import InquiryBanner from "../../components/InquiryBanner/InquiryBanner.jsx";
 import ServicesSection from "../../components/ServicesSection/ServicesSection.jsx";
-import Modal from '../../components/Modal/Modal';
+import ContactModal from '../../components/ContactModal/ContactModal.jsx';
 import ContactAndReviews from "../../components/ContactAndReviews/ContactAndReviews.jsx";
 import AboutSection from "../../components/AboutSection/AboutSection.jsx";
 import Reasons from "../../components/Reasons/Reasons.jsx";
@@ -22,7 +22,7 @@ export default function HomePage() {
             <Reasons />
             <InfoSection />
             <ContactSection />
-            <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+            <ContactModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
         </div>
     );
 }

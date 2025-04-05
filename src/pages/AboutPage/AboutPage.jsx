@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './AboutPage.module.css';
 import ContactAndReviews from '../../components/ContactAndReviews/ContactAndReviews';
+import ContactSection from '../../components/ContactSection/ContactSection';
 import { Users, CheckCircle, User } from 'lucide-react';
 
 function AboutPage() {
@@ -105,6 +106,9 @@ function AboutPage() {
                 
                 {/* Компонент с контактами и отзывами */}
                 <ContactAndReviews />
+                
+                {/* Форма обратной связи */}
+                <ContactSection />
             </div>
         </div>
     );

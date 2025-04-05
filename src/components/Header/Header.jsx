@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import clsx from 'clsx';
+import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
 
 export default function Header({ onOpenModal}) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -16,16 +17,6 @@ export default function Header({ onOpenModal}) {
                     </Link>
                 </div>
 
-                <button
-                    className={styles.burger}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Открыть меню"
-                >
-                    <span />
-                    <span />
-                    <span />
-                </button>
-
                 <div className={clsx(styles.menu, menuOpen && styles.menuOpen)}>
                     <nav className={styles.nav}>
                         <Link to="/index.html" onClick={() => setMenuOpen(false)}>Главная</Link>
@@ -34,15 +25,37 @@ export default function Header({ onOpenModal}) {
                     </nav>
 
                     <div className={styles.contact}>
-                        <a href="tel:+7 (495) 225-42-66" className={styles.phone}>
-                            +7 (499) 681-70-14
-                        </a>
                         <button className={styles.button} onClick={() => {
                             setMenuOpen(false);
                             onOpenModal();
                         }}>Оставить заявку</button>
                     </div>
                 </div>
+                
+                <div className={styles.headerRight}>
+                    <div className={styles.topSocialButtons}>
+                        <a href="https://wa.me/+79255171080" className={styles.socialButton}>
+                            <FaWhatsapp className={`${styles.socialIcon} ${styles.whatsappIcon}`} />
+                            <span className={styles.socialText}>Менеджер</span>
+                        </a>
+                        <a href="https://t.me/+79255171080" className={styles.socialButton}>
+                            <FaTelegram className={`${styles.socialIcon} ${styles.telegramIcon}`} />
+                            <span className={styles.socialText}>Менеджер</span>
+                        </a>
+                    </div>
+
+                    <button
+                        className={`${styles.burger} ${menuOpen ? styles.burgerActive : ''}`}
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label="Открыть меню"
+                    >
+                        <span />
+                        <span />
+                        <span />
+                    </button>
+                </div>
+
+               
             </div>
         </header>
     );

@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import styles from './HeroSection.module.css';
-import passportImage from '../../assets/hero.webp';
+import passportImage from '../../assets/hero.png';
 import {FaFileAlt, FaLock, FaMoneyCheckAlt} from "react-icons/fa";
-import Modal from "../Modal/Modal.jsx";
+import ContactModal from "../ContactModal/ContactModal.jsx";
 import '../../App.css'
 
 export default function HeroSection() {
@@ -51,7 +51,7 @@ export default function HeroSection() {
                         </div>
 
                         <button className={styles.cta} onClick={() => setModalOpen(true)}>УЗНАТЬ СПОСОБЫ ОФОРМЛЕНИЯ</button>
-                        <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+                        <ContactModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
 
                     </div>
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import styles from './Layout.module.css';
 import Header from "../Header/Header.jsx";
-import Modal from "../Modal/Modal.jsx";
+import ContactModal from "../ContactModal/ContactModal.jsx";
 import Footer from "../Footer/Footer.jsx";
 
 
@@ -23,7 +23,7 @@ export default function Layout() {
             
             <Footer />
 
-            <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+            <ContactModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
         </div>
     );
 }

@@ -26,6 +26,14 @@
     margin: 0 auto;
 }
 
+.fieldWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
 .label {
     font-size: 16px;
     margin-bottom: 5px;
@@ -37,11 +45,21 @@
 .input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.errorField {
+    border: 1px solid #e53935;
+}
+
+.errorMsg {
+    color: #e53935;
+    font-size: 13px;
+    margin-top: 4px;
+    text-align: left;
 }
 
 .submitButton {
@@ -53,8 +71,26 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%;
 }
 
 .submitButton:hover {
     background-color: #d14400;
+}
+
+.submitButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.successMessage {
+    background-color: #e8f5e9;
+    border: 1px solid #4caf50;
+    color: #388e3c;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 600;
 }
