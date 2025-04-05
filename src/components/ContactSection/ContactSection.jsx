@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './ContactSection.module.css';
+import { sendMessageToTelegram } from '../../utils/telegramAPI';
 
 const ContactSection = () => {
     const [name, setName] = useState('');
@@ -31,8 +32,12 @@ const ContactSection = () => {
         if (Object.keys(newErrors).length === 0) {
             setSending(true);
             
-            // Имитация отправки
-            setTimeout(() => {
+            try {
+                await sendMessageToTelegram({
+                    name,
+                    phone
+                });
+                
                 setSending(false);
                 setSuccess(true);
                 
@@ -41,7 +46,11 @@ const ContactSection = () => {
                     setName('');
                     setPhone('');
                 }, 3000);
-            }, 1000);
+            } catch (error) {
+                console.error('Ошибка при отправке:', error);
+                setSending(false);
+                alert('Произошла ошибка при отправке заявки. Пожалуйста, позвоните нам напрямую.');
+            }
         }
     };
 
