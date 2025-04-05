@@ -34,11 +34,11 @@ export default function Header({ onOpenModal}) {
                 
                 <div className={styles.headerRight}>
                     <div className={styles.topSocialButtons}>
-                        <a href="https://wa.me/+79255171080" className={styles.socialButton}>
+                        <a href="https://wa.me/+79031363808" className={styles.socialButton}>
                             <FaWhatsapp className={`${styles.socialIcon} ${styles.whatsappIcon}`} />
                             <span className={styles.socialText}>Менеджер</span>
                         </a>
-                        <a href="https://t.me/+79255171080" className={styles.socialButton}>
+                        <a href="https://t.me/+79031363808" className={styles.socialButton}>
                             <FaTelegram className={`${styles.socialIcon} ${styles.telegramIcon}`} />
                             <span className={styles.socialText}>Менеджер</span>
                         </a>

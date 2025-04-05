@@ -16,11 +16,10 @@ export default function HeroSection() {
                     <div className={styles.left}>
                         <h1 className={styles.title}>
                             <span className={styles.black}>Оформим </span>
-                            <span className={styles.pink}>Загранпаспорт</span>
-                            <span className={styles.black}> — без лишних очередей, переплат и бюрократии. </span>
-                            <span className={styles.black}>Уже </span>
-                            <span className={styles.pink}>10 лет</span>
-                            <span className={styles.black}> работаем на Ваш результат.</span>
+                            <span className={styles.pink}>документы</span>
+                            <span className={styles.black}> без лишних очередей и бюрократии:</span>
+                            <span className={styles.pink}> загранпаспорт, паспорт РФ, справку о судимости</span>
+                            <span className={styles.black}>. Работаем на Ваш результат.</span>
                         </h1>
 
 
@@ -29,15 +28,15 @@ export default function HeroSection() {
                                 <FaFileAlt className={styles.icon}/>
                                 <div>
                                     <strong>Полное сопровождение</strong><br/>
-                                    <span>при подаче документов</span>
+                                    <span>от подготовки до получения</span>
                                 </div>
                             </div>
 
                             <div className={styles.featureItem}>
                                 <FaMoneyCheckAlt className={styles.icon} />
                                 <div>
-                                    <strong>Поэтапная оплата /</strong><br/>
-                                    <span>Рассрочка</span>
+                                    <strong>Прозрачное ценообразование</strong><br/>
+                                    <span>и поэтапная оплата</span>
                                 </div>
                             </div>
 
@@ -57,7 +56,7 @@ export default function HeroSection() {
 
                     <div className={styles.right}>
                         <div className={styles.badge}>
-                            Каждый месяц мы сопровождаем сотни клиентов при оформлении РВП и ВНЖ
+                            Профессиональное содействие в оформлении загранпаспорта, паспорта РФ и справки о судимости
                         </div>
                         <img src={passportImage} alt="Паспорта" className={styles.image}/>
                     </div>

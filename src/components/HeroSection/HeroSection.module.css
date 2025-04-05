@@ -12,9 +12,9 @@
 .content {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .left {
