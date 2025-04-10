@@ -18,7 +18,7 @@ export default function HeroSection() {
                             <span className={styles.black}>Оформим </span>
                             <span className={styles.pink}>документы</span>
                             <span className={styles.black}> без лишних очередей и бюрократии:</span>
-                            <span className={styles.pink}> загранпаспорт, паспорт РФ, справку о судимости</span>
+                            <span className={styles.pink}> загранпаспорт, паспорт РФ, справку о несудимости</span>
                             <span className={styles.black}>. Работаем на Ваш результат.</span>
                         </h1>
 
@@ -36,7 +36,7 @@ export default function HeroSection() {
                                 <FaMoneyCheckAlt className={styles.icon} />
                                 <div>
                                     <strong>Прозрачное ценообразование</strong><br/>
-                                    <span>и поэтапная оплата</span>
+                                    <span>и комфортная стоимость</span>
                                 </div>
                             </div>
 
@@ -56,7 +56,7 @@ export default function HeroSection() {
 
                     <div className={styles.right}>
                         <div className={styles.badge}>
-                            Профессиональное содействие в оформлении загранпаспорта, паспорта РФ и справки о судимости
+                            Профессиональное содействие в оформлении загранпаспорта, паспорта РФ и справки о несудимости
                         </div>
                         <img src={passportImage} alt="Паспорта" className={styles.image}/>
                     </div>

@@ -28,9 +28,10 @@
 }
 
 .card {
-    background-color: #858585; /* тёмно-серый */
-    color: #fff;
+    background-color: white; /* тёмно-серый */
+    color: #000000;
     padding: 24px;
+    border: 1px solid #ed5e5e;
     border-radius: 12px;
     height: 100%;
     display: flex;
