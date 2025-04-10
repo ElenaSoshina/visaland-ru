@@ -85,10 +85,11 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
 
     // Цены для российского паспорта
     const ruPassportPrices = [
-        { label: "5 раб. дней", price: 44000 },
-        { label: "10 раб. дней", price: 36000 },
-        { label: "15 раб. дней", price: 32000 },
-        { label: "30 раб. дней", price: 28000 },
+        { label: "день в день", price: 45000 },
+        { label: "день в день (утрата)", price: 45000 },
+        { label: "1 раб. дней", price: 38000 },
+        { label: "2-3 раб. дней", price: 35000 },
+        { label: "3 недели (ДНР и ЛНР)", price: 45000 },
     ];
 
     // Цены для справки о судимости
@@ -101,10 +102,16 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
 
     // Цены для апостиля документов
     const apostilPrices = [
-        { label: "3 раб. дня", price: 30000 },
-        { label: "7 раб. дней", price: 25000 },
-        { label: "14 раб. дней", price: 20000 },
-        { label: "30 раб. дней", price: 15000 },
+        { label: "2-4 раб. дня", documentType: "Справки и свидетельства ЗАГС", price: 23000 },
+        { label: "1 раб. день до 10:30", documentType: "Апостиль на оригиналы св-в и справок (MO)", price: 13000 },
+        { label: "5-7 раб. дней", documentType: "Апостиль на оригиналы св-в и справок (MO)", price: 11000 },
+        { label: "1 раб. день до 10:30", documentType: "Апостиль на оригиналы св-в и справок (Москва)", price: 17000 },
+        { label: "7 раб. дней", documentType: "Апостиль на оригиналы св-в и справок (Москва)", price: 11000 },
+        { label: "день в день до 10:30", documentType: "Апостиль на нот.копии и документы Минюст (МО)", price: 17000 },
+        { label: "1 раб. день до 10:30", documentType: "Апостиль на нот.копии и документы Минюст (МО)", price: 12500 },
+        { label: "4 раб. день до 10:30", documentType: "Апостиль на нот.копии и документы Минюст (МО)", price: 9000 },
+        { label: "4 раб. дней", documentType: "Апостиль на нот.копии и документы Минюст (Москва)", price: 11500 },
+        { label: "7 раб. дней", documentType: "Апостиль на нот.копии и документы Минюст (Москва)", price: 9000 },
     ];
 
     // Функция для получения нужного массива цен в зависимости от возраста
@@ -384,7 +391,7 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
                                     return (
                                         <li key={index} className={styles.priceItem}>
                                             <span className={styles.priceLabel}>{item.label}</span>
-                                            <span className={styles.price}>{item.price} ₽</span>
+                                            <span className={styles.price}>{item.price} ₽ + госпошлина</span>
                                             <button
                                                 className={`${styles.selectButton} ${selectedBioIndex === index ? styles.selected : ""}`}
                                                 onClick={() => handleSelectPrice(item.price, index, "rupassport", item.label)}
@@ -435,6 +442,7 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
                                 {apostilPrices.map((item, index) => {
                                     return (
                                         <li key={index} className={styles.priceItem}>
+                                            <span className={styles.priceLabel}>{item.documentType}</span>
                                             <span className={styles.priceLabel}>{item.label}</span>
                                             <span className={styles.price}>{item.price} ₽</span>
                                             <button

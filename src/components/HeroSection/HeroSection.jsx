@@ -19,7 +19,7 @@ export default function HeroSection() {
                             <span className={styles.pink}>документы</span>
                             <span className={styles.black}> без лишних очередей и бюрократии:</span>
                             <span className={styles.pink}> загранпаспорт, паспорт РФ, справку о несудимости</span>
-                            <span className={styles.black}>. Работаем на Ваш результат.</span>
+                            <span className={styles.black}>. Работаем на результат.</span>
                         </h1>
 
 
