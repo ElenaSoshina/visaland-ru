@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ServicesSection.module.css';
 import {Link} from "react-router-dom";
+import { FaPassport, FaFileAlt, FaUserCheck } from 'react-icons/fa';
 import '../../App.css'
 
 export default function ServicesSection() {
@@ -15,6 +16,7 @@ export default function ServicesSection() {
                 'получение готового загранпаспорта — в среднем 10 дней',
             ],
             price: 'от 23 000 ₽',
+            icon: FaPassport
         },
         {
             id: 'rupassport',
@@ -26,6 +28,7 @@ export default function ServicesSection() {
                 'получение готового российского паспорта — 3 дня',
             ],
             price: 'от 35 000 ₽',
+            icon: FaFileAlt
         },
         {
             id: 'spravka-sudimost',
@@ -37,6 +40,7 @@ export default function ServicesSection() {
                 'получение справки о судимости — 10 дней',
             ],
             price: 'от 10 000 ₽',
+            icon: FaUserCheck
         },
     ];
 
@@ -52,6 +56,9 @@ export default function ServicesSection() {
                             className={styles.serviceCard}
                         >
                             <div className={styles.card}>
+                                <div className={styles.serviceIconContainer}>
+                                    <service.icon className={styles.serviceIcon} />
+                                </div>
                                 <p className={styles.title}>{service.title}</p>
                                 <p className={styles.subtitle}>{service.deadline}</p>
                                 <ul className={styles.list}>
