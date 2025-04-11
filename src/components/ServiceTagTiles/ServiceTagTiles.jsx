@@ -13,15 +13,15 @@ const ServiceTagTiles = ({ currentServiceId }) => {
             title: 'Загранпаспорт срочно'
         },
         {
-            id: 'rupassport',
+            id: 'rossiyskiy-pasport',
             title: 'Российский паспорт для граждан РФ'
         },
         {
-            id: 'spravka-sudimost',
+            id: 'spravka-ob-otsustvii-sudimosti',
             title: 'Справка о судимости'
         },
         {
-            id: 'zagranpassport-child',
+            id: 'oformlenie-zagranpasporta-na-rebenka',
             title: 'Загранпаспорт для детей'
         },
         {
@@ -29,11 +29,11 @@ const ServiceTagTiles = ({ currentServiceId }) => {
             title: 'Апостиль документов'
         },
         {
-            id: 'zagranpassport-no-military',
+            id: 'zagranpasport-bez-voennogo-bileta',
             title: 'Загранпаспорт без военного билета'
         },
         {
-            id: 'zagranpassport-no-reg',
+            id: 'zagranpasport-bez-registratsii-v-moskve',
             title: 'Загранпаспорт без регистрации'
         },
         {
