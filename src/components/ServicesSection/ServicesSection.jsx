@@ -46,7 +46,10 @@ export default function ServicesSection() {
                 <h2 className={styles.heading}>Чем мы можем Вам помочь</h2>
                 <div className={styles.cards}>
                     {services.map((service, index) => (
-                        <Link key={index} to={`/service/${service.id}.html`} className={styles.cardLink}>
+                        <Link 
+                            to={`/${service.id}.html`} 
+                            className={styles.serviceCard}
+                        >
                             <div className={styles.card}>
                                 <p className={styles.title}>{service.title}</p>
                                 <p className={styles.subtitle}>{service.deadline}</p>

@@ -30,12 +30,11 @@ export default function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Navigate to="/index.html" replace />} />
                     <Route path="/index.html" element={<HomePage />} />
-                    <Route path="/service.html" element={<ServicesPage />} />
-                    <Route path="/:id.html" element={<ServiceDetailPage />} />
-                    <Route path="/baza-znaniy.html" element={<KnowledgeBasePage />} />
-                    <Route path="/articles.html" element={<ArticlesPage />} />
+                    <Route path="/services.html" element={<ServicesPage />} />
                     <Route path="/about.html" element={<AboutPage />} />
-                    <Route path="/usefulinfo.html" element={<UsefulInfo />} />
+                    <Route path="/:id.html" element={<ServiceDetailPage />} />
+                    <Route path="/articles.html" element={<ArticlesPage />} />
+                    <Route path="/usefulinfo.html" element={<KnowledgeBasePage />} />
                     <Route path="/faq.html" element={<FAQ />} />
                 </Route>
             </Routes>
