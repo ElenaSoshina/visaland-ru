@@ -30,7 +30,7 @@ export default function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Navigate to="/index.html" replace />} />
                     <Route path="/index.html" element={<HomePage />} />
-                    <Route path="/services.html" element={<ServicesPage />} />
+                    <Route path="/service.html" element={<ServicesPage />} />
                     <Route path="/about.html" element={<AboutPage />} />
                     <Route path="/:id.html" element={<ServiceDetailPage />} />
                     <Route path="/articles.html" element={<ArticlesPage />} />

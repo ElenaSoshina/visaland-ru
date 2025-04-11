@@ -6,12 +6,12 @@ const ServiceCard = ({ service }) => {
     const navigate = useNavigate();
     
     const handleClick = () => {
-        navigate(`/service/${service.id}.html`);
+        navigate(`/${service.id}.html`);
     };
     
     const handleButtonClick = (e) => {
         e.stopPropagation();
-        navigate(`/service/${service.id}.html`);
+        navigate(`/${service.id}.html`);
     };
     
     return (

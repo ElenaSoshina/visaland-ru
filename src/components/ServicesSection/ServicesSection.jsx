@@ -47,6 +47,7 @@ export default function ServicesSection() {
                 <div className={styles.cards}>
                     {services.map((service, index) => (
                         <Link 
+                            key={index}
                             to={`/${service.id}.html`} 
                             className={styles.serviceCard}
                         >
