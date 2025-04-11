@@ -45,7 +45,9 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
     }, [serviceId]);
 
     const validateEmail = (email) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
-    const validatePhone = (phone) => phone.replace(/\D/g, "").length === 11;
+    const validatePhone = (phone) => {
+        return /^\+7\d{10}$/.test(phone);
+    };
 
     // Цены для разных услуг
     const bioPricesAdult = [
@@ -186,23 +188,27 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
         if (name === "phone") {
             setErrors((prev) => ({
                 ...prev,
-                phone: validatePhone(value) ? "" : "Введите корректный номер телефона",
+                phone: validatePhone(value) ? "" : "Введите корректный номер телефона в формате +7XXXXXXXXXX",
             }));
         }
 
         if (name === "consent") {
             setErrors((prev) => ({
                 ...prev,
-                consent: checked ? "" : "Вы должны согласиться с обработкой данных",
+                consent: checked ? "" : "Необходимо согласие на обработку персональных данных",
             }));
         }
     };
 
-    const isFormValid =
-        formData.name &&
-        formData.phone &&
-        formData.consent &&
-        selectedPassportType !== "";
+    const validateForm = () => {
+        const newErrors = {};
+        if (!formData.name) newErrors.name = "Введите ваше имя";
+        if (!formData.email) newErrors.email = "Введите ваш email";
+        if (!validatePhone(formData.phone)) newErrors.phone = "Введите корректный номер телефона в формате +7XXXXXXXXXX";
+        if (!formData.consent) newErrors.consent = "Необходимо согласие на обработку персональных данных";
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -517,7 +523,7 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
                             </div>
 
                         {/* Кнопка отправки */}
-                        <button className={styles.submitButton} disabled={!isFormValid} onClick={handleSubmit}>
+                        <button className={styles.submitButton} disabled={!validateForm()} onClick={handleSubmit}>
                             Отправить заявку
                         </button>
 
