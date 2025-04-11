@@ -86,7 +86,7 @@ const ServiceTagTiles = ({ currentServiceId }) => {
                     {otherServices.map((service) => (
                         <SwiperSlide key={service.id} className={styles.slideWrapper}>
                             <Link 
-                                to={`/service/${service.id}.html`} 
+                                to={`/${service.id}.html`} 
                                 className={styles.tagTile}
                             >
                                 {service.title}

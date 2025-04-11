@@ -31,7 +31,7 @@ export default function App() {
                     <Route index element={<Navigate to="/index.html" replace />} />
                     <Route path="/index.html" element={<HomePage />} />
                     <Route path="/service.html" element={<ServicesPage />} />
-                    <Route path="/service/:id.html" element={<ServiceDetailPage />} />
+                    <Route path="/:id.html" element={<ServiceDetailPage />} />
                     <Route path="/baza-znaniy.html" element={<KnowledgeBasePage />} />
                     <Route path="/articles.html" element={<ArticlesPage />} />
                     <Route path="/about.html" element={<AboutPage />} />
