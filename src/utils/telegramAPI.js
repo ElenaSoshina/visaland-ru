@@ -20,7 +20,23 @@ export async function sendMessageToTelegram(formData) {
   
     if (hasOnlyNameAndPhone) text += `📞 <i>Заявка на консультацию</i>\n`;
   
-    if (formData.service) text += `🛠 <b>Услуга:</b> ${formData.service}\n`;
+    const serviceNames = {
+        'zagranpasport-srochno-nedorogo': 'Загранпаспорт срочно',
+        'oformlenie-zagranpasporta-na-rebenka': 'Загранпаспорт для детей',
+        'zagranpasport-bez-registratsii-v-moskve': 'Загранпаспорт без регистрации',
+        'zagranpassport-debt': 'Загранпаспорт с задолженностями',
+        'zagranpasport-bez-voennogo-bileta': 'Загранпаспорт без военного билета',
+        'rossiyskiy-pasport': 'Российский паспорт для граждан РФ',
+        'spravka-ob-otsustvii-sudimosti': 'Справка о наличии/отсутствии судимости',
+        'apostil': 'Апостиль документов'
+    };
+
+    if (formData.service) {
+        text += `🛠 <b>Услуга:</b> ${serviceNames[formData.service] || formData.service}\n`;
+        if (formData.service === 'spravka-ob-otsustvii-sudimosti' && formData.apostil) {
+            text += `📄 <b>Апостиль:</b> Да\n`;
+        }
+    }
     if (formData.name) text += `👤 <b>Имя:</b> ${formData.name}\n`;
     if (formData.phone) text += `📞 <b>Телефон:</b> ${formData.phone}\n`;
     if (formData.age) {
@@ -49,4 +65,4 @@ export async function sendMessageToTelegram(formData) {
     }
   
     return true;
-} 
+}

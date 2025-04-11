@@ -10,8 +10,8 @@
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
     justify-content: center;
 }
@@ -89,14 +89,26 @@
     color: white;
 }
 
+.serviceCard {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 768px) {
     .section {
         padding: 40px 0;
     }
     
-    .cardLink {
-        flex: 1 1 100%;
-        max-width: 100%;
+    .cards {
+        grid-template-columns: 1fr;
     }
 }
 

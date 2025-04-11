@@ -476,3 +476,127 @@
         gap: 0;
     }
 }
+
+.successPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    z-index: 1001;
+    min-width: 300px;
+}
+
+.successPopup h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.successPopup p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.successButton {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.successButton:hover {
+    background: #2980b9;
+}
+
+.apostilToggle {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.apostilToggle .checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #495057;
+}
+
+.apostilToggle input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0d6efd;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    background: white;
+}
+
+.apostilToggle input[type="checkbox"]:checked {
+    background: #0d6efd;
+}
+
+.apostilToggle input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.apostilNote {
+    font-size: 14px;
+    color: #6c757d;
+    margin-left: 10px;
+}
+
+.totalPrice {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 8px;
+    color: #ed5e5e;
+    padding: 15px;
+    background: #fff5f5;
+    border-radius: 8px;
+    border: 1px solid #ffe3e3;
+    transition: all 0.3s ease;
+}
+
+.totalPrice:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(237, 94, 94, 0.1);
+}
+
+.apostilNote {
+    font-size: 14px;
+    color: #6c757d;
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+.priceNote {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    margin-top: 5px;
+    display: block;
+}

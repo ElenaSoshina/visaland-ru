@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 const ServiceTagTiles = ({ currentServiceId }) => {
     const services = [
         {
-            id: 'zagranpassport',
+            id: 'zagranpasport-srochno-nedorogo',
             title: 'Загранпаспорт срочно'
         },
         {
@@ -21,7 +21,7 @@ const ServiceTagTiles = ({ currentServiceId }) => {
             title: 'Справка о судимости'
         },
         {
-            id: 'viza',
+            id: 'zagranpassport-child',
             title: 'Загранпаспорт для детей'
         },
         {
@@ -29,16 +29,16 @@ const ServiceTagTiles = ({ currentServiceId }) => {
             title: 'Апостиль документов'
         },
         {
-            id: 'passport-no-military',
+            id: 'zagranpassport-no-military',
             title: 'Загранпаспорт без военного билета'
         },
         {
-            id: 'inn',
+            id: 'zagranpassport-no-reg',
             title: 'Загранпаспорт без регистрации'
         },
         {
-            id: 'snils',
-            title: 'Загранпаспорт стандарт/биометрия'
+            id: 'zagranpassport-debt',
+            title: 'Загранпаспорт с задолжностями'
         }
     ];
 

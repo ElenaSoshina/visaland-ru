@@ -1,0 +1,65 @@
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.defaultAvatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #666;
+}
+
+.info {
+    flex: 1;
+}
+
+.name {
+    margin: 0 0 5px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.rating {
+    margin-bottom: 5px;
+}
+
+.star {
+    color: #ffd700;
+    margin-right: 2px;
+}
+
+.date {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+} 

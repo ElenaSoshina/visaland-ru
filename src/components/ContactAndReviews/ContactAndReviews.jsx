@@ -35,18 +35,7 @@ export default function ContactAndReviews() {
                     <p className={styles.description}>Наши клиенты довольны сервисом и рекомендуют нас!</p>
 
                     <div className={styles.reviewsWidget}>
-                        {/*<iframe*/}
-                        {/*    src="https://yandex.ru/maps-reviews-widget/1080088379?comments"*/}
-                        {/*    style={{*/}
-                        {/*        width: '100%',*/}
-                        {/*        height: '520px',*/}
-                        {/*        border: '1px solid #e6e6e6',*/}
-                        {/*        borderRadius: '8px'*/}
-                        {/*    }}*/}
-                        {/*    title="Отзывы Яндекс.Карты"*/}
-                        {/*/>*/}
-                        <iframe src="https://swdgts.ru/8e3ca1270588805197678ab595a27a69" width="100%" height="700"
-                                frameBorder="0"></iframe>
+                    <iframe src="https://swdgts.ru/8e3ca1270588805197678ab595a27a69" width="100%" height="700" frameBorder="0"></iframe>
                     </div>
                 </div>
             </div>
