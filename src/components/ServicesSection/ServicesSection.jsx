@@ -7,7 +7,7 @@ import '../../App.css'
 export default function ServicesSection() {
     const services = [
         {
-            id: 'zagranpassport',
+            id: 'zagranpasport-srochno-nedorogo',
             title: 'Содействие в ускоренном получении заграничного паспорта',
             deadline: 'Что входит в услугу:',
             list: [
@@ -19,7 +19,7 @@ export default function ServicesSection() {
             icon: FaPassport
         },
         {
-            id: 'rupassport',
+            id: 'rossiyskiy-pasport',
             title: 'Российский паспорт для граждан РФ, в срочном порядке',
             deadline: 'Что входит в услугу:',
             list: [
@@ -31,7 +31,7 @@ export default function ServicesSection() {
             icon: FaFileAlt
         },
         {
-            id: 'spravka-sudimost',
+            id: 'spravka-ob-otsustvii-sudimosti',
             title: 'Справка о наличии/отсутствии судимости',
             deadline: 'Что входит в услугу:',
             list: [
