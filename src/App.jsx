@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import HomePage from './pages/HomePage/HomePage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
@@ -24,7 +24,7 @@ function ScrollToTop() {
 
 export default function App() {
     return (
-        <Router basename="/visaland-ru">
+        <HashRouter>
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Layout />}>
@@ -39,6 +39,6 @@ export default function App() {
                     <Route path="/faq.html" element={<FAQ />} />
                 </Route>
             </Routes>
-        </Router>
+        </HashRouter>
     );
 }
