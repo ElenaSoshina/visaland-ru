@@ -47,7 +47,7 @@ function Footer() {
                 </div>
 
                 <div className={styles.legal}>
-                    <p className={styles.legalText}>© VISALAND — Оформление заграничных паспортов в России.</p>
+                    <p className={styles.legalText}>© VISALAND — помощь в оформлении документов</p>
                     <button className={styles.link} onClick={() => setIsPrivacyOpen(true)}>Политика конфиденциальности</button> |
                     <button className={styles.link} onClick={() => setIsPublicOfferOpen(true)}>Публичная оферта</button>
                 </div>

@@ -30,6 +30,10 @@ export default function Header({ onOpenModal}) {
                             onOpenModal();
                         }}>Оставить заявку</button>
                     </div>
+
+                    <div>
+                        <a className={styles.header_phone} href="tel:+74991363808">+7 (499) 136-38-08</a>
+                    </div>
                 </div>
                 
                 <div className={styles.headerRight}>

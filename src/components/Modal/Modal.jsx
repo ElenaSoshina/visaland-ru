@@ -542,7 +542,12 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
                                 {selectedPassportType === 'Справка о наличии/отсутствии судимости' && needApostil && (
                                     <span className={styles.apostilNote}> (включая апостиль)</span>
                                 )}
-                                {selectedPassportType !== 'Справка о наличии/отсутствии судимости' && selectedPassportType !== 'Апостиль документов' && (
+                                {(selectedPassportType === 'Биометрический загранпаспорт' || 
+                                  selectedPassportType === 'Загранпаспорт старого образца' ||
+                                  selectedPassportType === 'Загранпаспорт без регистрации' ||
+                                  serviceId === 'oformlenie-zagranpasporta-na-rebenka') ? (
+                                    <span className={styles.apostilNote}> (госпошлина включена)</span>
+                                ) : (
                                     <span className={styles.apostilNote}> (госпошлина не включена)</span>
                                 )}
                             </div>

@@ -126,6 +126,11 @@
     gap: 16px;
 }
 
+.header_phone {
+    color: #000000;
+    
+}
+
 .phone {
     color: #333;
     font-weight: 500;
