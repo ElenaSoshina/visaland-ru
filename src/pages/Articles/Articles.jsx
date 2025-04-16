@@ -362,8 +362,8 @@ export default function Articles() {
                                         dangerouslySetInnerHTML={{ __html: article.content }}
                                     />
                                     <div className={styles.articleFooter}>
-                                        <Link 
-                                            to={`/services/${article.serviceId}`} 
+                                        <Link
+                                            to='/services'
                                             className={styles.orderButton}
                                         >
                                             Заказать услугу
