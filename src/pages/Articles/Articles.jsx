@@ -362,12 +362,14 @@ export default function Articles() {
                                         dangerouslySetInnerHTML={{ __html: article.content }}
                                     />
                                     <div className={styles.articleFooter}>
-                                        <Link
-                                            to='/services'
+                                        <a 
+                                            href="http://visaland.ru/service.html"
                                             className={styles.orderButton}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
                                             Заказать услугу
-                                        </Link>
+                                        </a>
                                     </div>
                                 </>
                             )}
