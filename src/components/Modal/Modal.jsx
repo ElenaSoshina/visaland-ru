@@ -50,14 +50,14 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
 
     // Цены для разных услуг
     const bioPricesAdult = [
-        { label: "5 раб. день", price: 86000 },
-        { label: "6 раб. день", price: 72000 },
-        { label: "7 раб. день", price: 68000 },
-        { label: "8 раб. день", price: 61000 },
-        { label: "12 раб. день", price: 37000 },
-        { label: "13 раб. день", price: 28000 },
-        { label: "17 раб. день", price: 24000 },
-        { label: "24 раб. день", price: 23000 },
+        { label: "5 раб. день", price: 80000 },
+        { label: "6 раб. день", price: 66000 },
+        { label: "7 раб. день", price: 62000 },
+        { label: "8 раб. день", price: 55000 },
+        { label: "12 раб. день", price: 31000 },
+        { label: "13 раб. день", price: 22000 },
+        { label: "17 раб. день", price: 18000 },
+        { label: "24 раб. день", price: 17000 },
     ];
 
     const debtPrices = [
@@ -71,19 +71,19 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
     ];
 
     const oldPricesAdult = [
-        { label: "5 раб. день", price: 75000 },
-        { label: "6 раб. день", price: 68000 },
-        { label: "7 раб. день", price: 62000 },
-        { label: "8 раб. день", price: 54000 },
-        { label: "17 раб. день", price: 25500 },
-        { label: "24 раб. день", price: 22000 },
+        { label: "5 раб. день", price: 73000 },
+        { label: "6 раб. день", price: 66000 },
+        { label: "7 раб. день", price: 60000 },
+        { label: "8 раб. день", price: 52000 },
+        { label: "17 раб. день", price: 23500 },
+        { label: "24 раб. день", price: 20000 },
     ];
 
     const bioPricesChild = [
-        { label: "2 раб. день", price: 50000 },
-        { label: "5 раб. день", price: 23000 },
-        { label: "7 раб. день", price: 21000 },
-        { label: "12 раб. день", price: 19000 },
+        { label: "2 раб. день", price: 47000 },
+        { label: "5 раб. день", price: 20000 },
+        { label: "7 раб. день", price: 18000 },
+        { label: "12 раб. день", price: 16000 },
     ];
 
     const urgentChildPrices = [
@@ -93,11 +93,11 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
     ];
 
     const oldPricesChild = [
-        { label: "1 раб. день", price: 30000 },
-        { label: "2 раб. день", price: 26000 },
-        { label: "3 раб. день", price: 23000 },
-        { label: "5 раб. день", price: 21000 },
-        { label: "12 раб. день", price: 18000 },
+        { label: "1 раб. день", price: 29000 },
+        { label: "2 раб. день", price: 25000 },
+        { label: "3 раб. день", price: 22000 },
+        { label: "5 раб. день", price: 20000 },
+        { label: "12 раб. день", price: 17000 },
     ];
 
     // Цены для российского паспорта
@@ -542,14 +542,14 @@ const Modal = ({ isOpen, onClose, serviceId }) => {
                                 {selectedPassportType === 'Справка о наличии/отсутствии судимости' && needApostil && (
                                     <span className={styles.apostilNote}> (включая апостиль)</span>
                                 )}
-                                {(selectedPassportType === 'Биометрический загранпаспорт' || 
-                                  selectedPassportType === 'Загранпаспорт старого образца' ||
-                                  selectedPassportType === 'Загранпаспорт без регистрации' ||
-                                  serviceId === 'oformlenie-zagranpasporta-na-rebenka') ? (
-                                    <span className={styles.apostilNote}> (госпошлина включена)</span>
-                                ) : (
-                                    <span className={styles.apostilNote}> (госпошлина не включена)</span>
-                                )}
+                                {/*{(selectedPassportType === 'Биометрический загранпаспорт' || */}
+                                {/*  selectedPassportType === 'Загранпаспорт старого образца' ||*/}
+                                {/*  selectedPassportType === 'Загранпаспорт без регистрации' ||*/}
+                                {/*  serviceId === 'oformlenie-zagranpasporta-na-rebenka') ? (*/}
+                                {/*    <span className={styles.apostilNote}> (госпошлина включена)</span>*/}
+                                {/*) : (*/}
+                                {/*    <span className={styles.apostilNote}> (госпошлина не включена)</span>*/}
+                                {/*)}*/}
                             </div>
                         )}
 
